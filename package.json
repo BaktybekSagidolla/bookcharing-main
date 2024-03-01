@@ -28,3 +28,18 @@
     "path": "^0.12.7"
   }
 }
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/" }
+  ]
+}
+
